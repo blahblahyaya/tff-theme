@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-12" ng-if="boxes.length == 0 && cartEmpty=='1'">
+        <div class="message-card text-center">
+            <div class="card-block">
+                <blockquote class="card-blockquote">
+                    <p>No Fabfit boxes available at this time.</p>
+                   <div style="font-size:14px"><a href="/check-order-status/">Check Order Status</a> | <div style="font-size:14px"><a href="manage-subscription">Manage Subscription</a> | <a href="update-style">Update My Style Preferences</a> | <a href="/my-account/">Go to My Account</a></div>
+                    <footer></footer>
+                </blockquote>
+            </div>
+        </div>
+<div align="center" style="clear:both;margin-top:20px"><a href="/contact-my-stylist/" class="btn-hollow" style="padding:10px">Contact my Stylist</a> <a href="/my-account/" class="btn-hollow" style="padding:10px">My Account</a></div>
+    </div>
+    <div class="col-md-4" ng-if="cartEmpty=='1'" ng-repeat="box in boxes">
+        <div class="main-card" ng-if="boxes.length > 0">
+            <img class="img-circle" ng-src="{{assetsUrl}}/fabfit-box-black.jpg" alt="Card image cap">
+            <div class="text-center">
+                <h4 class="card-title" ng-bind-html="box.title.rendered | to_trusted"></h4>
+                <p class="card-text">Tell us about your Fabfit.</p>
+                <a ui-sref="box({id: $index})" class="btn btn-primary">Begin Checkout</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-md-4" ng-if="cartEmpty==''">
+        <div class="main-card">
+           <!-- <a href="" ng-click="editCart()"><i class="fa fa-edit"></i></a>-->
+            <div class="text-center"><i class="fa fa-credit-card fa-5x"></i></div>
+            <div class="caption text-center">
+                <h3>Finalize your FabFit</h3>
+                <p class="text-center">
+                    <button ng-click="completePurchase();" type="button" class="btn btn-success">Checkout Now</button>
+                </p>
+            </div>
+        </div>
+        <div align="center" style="clear:both;margin-top:20px"><a href="/contact-my-stylist/" class="btn-hollow" style="padding:10px">Contact my Stylist</a> <a href="/my-account/" class="btn-hollow" style="padding:10px">My Account</a></div>
+    </div>

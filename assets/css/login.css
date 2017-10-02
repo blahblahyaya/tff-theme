@@ -1,0 +1,8 @@
+#login h1 a {
+    width: 323px;
+    height: 198px;
+    margin: 0 auto 15px;
+    background: url('../img/fabfit_logo.png') no-repeat;
+    background-size: cover;
+    box-shadow: none;
+}
