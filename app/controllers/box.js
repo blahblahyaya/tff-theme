@@ -29,12 +29,12 @@ angular.module('fabfitApp')
         $scope.customerOptions = [];
 
         $scope.addProduct = function(p) {
-           // $scope.pending -= 1;
+            $scope.pending -= 1;
             checkoutProducts.push(p.ID);
         }
 
         $scope.removeProduct = function(p) {
-           // $scope.pending -= 1;
+            $scope.pending -= 1;
             var productIndex = checkoutProducts.indexOf(p.ID);
             if (productIndex > -1) {
                 checkoutProducts.splice(productIndex, 1);
@@ -55,25 +55,8 @@ angular.module('fabfitApp')
             });
         }
 
-        // make sure the customer has chosen at lease one reason for each product.customerOptions
-        // before showing the finalize box (shows when pending === 0)
-        $scope.selectAction = function() {
-            console.log($scope.box.acf.products);
-            $scope.pending = 3;
-            angular.forEach($scope.box.acf.products, function(item) {
-                console.log(item.customerOptions);
-                if (item.customerOptions) {
-                    if (item.customerOptions.length > 0) {
-                        $scope.pending -= 1;   
-                    }
-                }
-            });
-            console.log($scope.pending);
-        };
-
         $scope.setBack = function() {
-            alert("not finally!");
-           // $scope.pending += 1;
+            $scope.pending += 1;
         }
 
         $scope.completePurchase = function() {

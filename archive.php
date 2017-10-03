@@ -3,7 +3,9 @@
     <div class="container">
         <div class="row">
 
-           <?php mad_main_before(); ?>
+            <?php get_sidebar(); ?>
+
+            <?php mad_main_before(); ?>
                 <?php get_template_part('templates/content', 'archive'); ?>
             <?php mad_main_after(); ?>
 

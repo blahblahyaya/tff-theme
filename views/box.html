@@ -29,17 +29,15 @@
                 </p>
                 <p ng-if="product.selected">
                     <label>Tell us why? Select all that apply:</label>
-                    <multiselect ng-if="!product.return" ng-change="selectAction()" ng-model="product.customerOptions" options="keepitOptions" ng-click="updateFeedBack(product)">
+                    <multiselect ng-if="!product.return" ng-model="product.customerOptions" options="keepitOptions" ng-click="updateFeedBack(product)">
                     </multiselect>
-                    <multiselect ng-if="product.return" ng-change="selectAction()" ng-model="product.customerOptions" options="returnOptions" ng-click="updateFeedBack(product)">
+                    <multiselect ng-if="product.return" ng-model="product.customerOptions" options="returnOptions" ng-click="updateFeedBack(product)">
                     </multiselect>
                 </p>
             </div>
         </div>
     </div>
-</div>
-<div class="row" ng-if="!loading">
-    <div class="col-sm-6 col-md-4 col-centered" ng-if="pending == 0">
+    <div class="col-sm-6 col-md-4" ng-if="pending == 0">
         <div class="thumbnail well payment-card-well">
             <div class="text-center"><i class="fa fa-credit-card fa-5x"></i></div>
             <div class="caption text-center">

@@ -99,7 +99,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-fabfit-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="/fabfit/">Current FabFit Box<span class="sr-only">(current)</span></a></li>
+                    <li><a href="/fabfit/">Current Orders <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <?php global $current_user;

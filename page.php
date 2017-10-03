@@ -4,6 +4,8 @@
         <div class="row">
       <?php if(!is_user_logged_in()):?><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/inner-banner-2.jpg"/><?php endif ?>
 
+            <?php get_sidebar(); ?>
+
             <?php mad_main_before(); ?>
                 <?php get_template_part('templates/content', 'page'); ?>
             <?php mad_main_after(); ?>

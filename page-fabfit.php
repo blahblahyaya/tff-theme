@@ -9,7 +9,7 @@ if ( !is_user_logged_in() ) {
     <div class="container" ng-app="fabfitApp">
         <div class="row"><?php global $current_user;
 wp_get_current_user();
-echo '<h3>Welcome back, ' . $current_user->user_firstname . "!</h3> \n";
+echo '<h3>Welcome back ' . $current_user->user_firstname . "!</h3> \n";
 ?>
             <div class="container" ui-view=""></div>
         </div>
